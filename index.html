@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>کافی‌شاپ · منوی هوشمند</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+    <!--
+    ============================================================
+    کلیه حقوق مادی و معنوی این اثر متعلق به ghasemidev.ir می‌باشد.
+    هرگونه کپی‌برداری، توزیع یا استفاده تجاری بدون اجازه کتبی ممنوع است.
+    ============================================================
+    -->
+
+    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-all" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+        <symbol id="icon-hot" viewBox="0 0 24 24"><path d="M8 21h8"/><path d="M12 21v-4"/><path d="M6 6h12v7a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V6Z"/><path d="M18 8a3 3 0 0 0 2-2.5 2.5 2.5 0 0 0-4-1.5"/><path d="M14 4a2 2 0 0 0-4 0"/></symbol>
+        <symbol id="icon-cold" viewBox="0 0 24 24"><path d="M5 6h14"/><path d="M7 6v10a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4V6"/><path d="M9 2v4"/><path d="M15 2v4"/><path d="M12 12v4"/></symbol>
+        <symbol id="icon-sandwich" viewBox="0 0 24 24"><path d="M6 8h12"/><path d="M6 16h12"/><path d="M4 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4Z"/><path d="M8 6v2"/><path d="M16 6v2"/><path d="M10 14l2 2 2-2"/></symbol>
+        <symbol id="icon-dessert-cake" viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M6 8a3 3 0 0 1 6 0 3 3 0 0 1 6 0"/><path d="M6 8v8a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/><path d="M8 14h8"/><circle cx="12" cy="10" r="1"/></symbol>
+        <symbol id="icon-shake" viewBox="0 0 24 24"><path d="M6 4h12"/><path d="M9 4v12a3 3 0 0 0 3 3h0a3 3 0 0 0 3-3V4"/><path d="M6 10h12"/><path d="M8 18h8"/><path d="M12 20v2"/></symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="icon-fab" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-10a8 8 0 0 1 16 0c0 5.5-8 10-8 10z"/><circle cx="12" cy="12" r="3"/></symbol>
+    </svg>
+
+    <div class="filter-fixed" id="desktopFilterFixed">
+        <button class="filter-btn-icon active" data-filter="all" aria-label="همه" tabindex="0" role="button" aria-pressed="true">
+            <svg viewBox="0 0 24 24"><use href="#icon-all"/></svg>
+            <span class="tooltip-label">همه</span>
+        </button>
+        <button class="filter-btn-icon" data-filter="sandwich" aria-label="ساندویچ" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><use href="#icon-sandwich"/></svg>
+            <span class="tooltip-label">ساندویچ</span>
+        </button>
+        <button class="filter-btn-icon" data-filter="hot-drinks" aria-label="نوشیدنی گرم" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><use href="#icon-hot"/></svg>
+            <span class="tooltip-label">گرم</span>
+        </button>
+        <button class="filter-btn-icon" data-filter="cold-drinks" aria-label="نوشیدنی سرد" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><use href="#icon-cold"/></svg>
+            <span class="tooltip-label">سرد</span>
+        </button>
+        <button class="filter-btn-icon" data-filter="desserts" aria-label="دسر و کیک" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><use href="#icon-dessert-cake"/></svg>
+            <span class="tooltip-label">دسر</span>
+        </button>
+        <button class="filter-btn-icon" data-filter="shake" aria-label="شیک و بستنی" tabindex="0" role="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><use href="#icon-shake"/></svg>
+            <span class="tooltip-label">شیک</span>
+        </button>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="header-wrap">
+            <div class="search-wrap">
+                <svg class="search-icon" viewBox="0 0 24 24"><use href="#icon-search"/></svg>
+                <input type="text" id="searchInput" placeholder="جستجو در منو..." aria-label="جستجوی محصولات">
+            </div>
+            <div class="logo-wrap">
+                <img src="assets/images/coffee.webp" alt="کافی‌شاپ" loading="lazy">
+            </div>
+        </div>
+
+        <div class="row g-0">
+            <div class="col-12 menu-content" id="menuContent">
+                <div id="productList"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-item">
+            <svg viewBox="0 0 24 24"><use href="#icon-phone"/></svg>
+            <span>شماره تماس: <a href="tel:+989123456789" style="color:inherit;text-decoration:none;">ghasemidev.ie</a></span>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-item">
+            <svg viewBox="0 0 24 24"><use href="#icon-location"/></svg>
+            <span>آدرس: <a href="https://ghasemidev.ir" target="_blank" style="color:inherit;text-decoration:none;">ghasemidev.ir</a></span>
+        </div>
+    </footer>
+
+    <button class="fab-filter" id="fabFilter" aria-label="باز کردن منوی فیلتر" tabindex="0" role="button">
+        <svg viewBox="0 0 24 24"><use href="#icon-fab"/></svg>
+    </button>
+
+    <div class="bottom-sheet-overlay" id="bottomSheetOverlay"></div>
+    <div class="bottom-sheet" id="bottomSheet">
+        <div class="handle"></div>
+        <div class="sheet-title">فیلتر منو</div>
+        <div class="sheet-grid" id="mobileFilterGrid">
+            <button class="sheet-btn active" data-filter="all" tabindex="0" role="button" aria-pressed="true">
+                <svg viewBox="0 0 24 24"><use href="#icon-all"/></svg> همه
+            </button>
+            <button class="sheet-btn" data-filter="sandwich" tabindex="0" role="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><use href="#icon-sandwich"/></svg> ساندویچ
+            </button>
+            <button class="sheet-btn" data-filter="hot-drinks" tabindex="0" role="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><use href="#icon-hot"/></svg> گرم
+            </button>
+            <button class="sheet-btn" data-filter="cold-drinks" tabindex="0" role="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><use href="#icon-cold"/></svg> سرد
+            </button>
+            <button class="sheet-btn" data-filter="desserts" tabindex="0" role="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><use href="#icon-dessert-cake"/></svg> دسر
+            </button>
+            <button class="sheet-btn" data-filter="shake" tabindex="0" role="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><use href="#icon-shake"/></svg> شیک
+            </button>
+        </div>
+        <button class="sheet-close" id="closeSheetBtn" tabindex="0" role="button">بستن</button>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <!--
+    ============================================================
+    کپی‌رایت © ۱۴۰۳ - کلیه حقوق برای ghasemidev.ir محفوظ است.
+    ============================================================
+    -->
+</body>
+</html>
